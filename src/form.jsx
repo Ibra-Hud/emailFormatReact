@@ -3,6 +3,7 @@
 
 import { runAI } from "./apiIntegration";
 import { useState } from "react";
+import Markdown from "https://esm.sh/react-markdown@10";
 
 export const Form = () => {
   const [generatedEmail, setGeneratedEmail] = useState("");
@@ -46,7 +47,7 @@ export const Form = () => {
         {generatedEmail && (
           <div>
             <h4>{subject}</h4>
-            <p>{generatedEmail}</p>
+            <Markdown>{generatedEmail}</Markdown>
             <br />
             <br />
             <p style={{ color: "orange" }}>
